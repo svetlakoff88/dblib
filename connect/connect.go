@@ -48,7 +48,7 @@ func (c *Connection) ConnectionString() (string, error) {
 	}
 	cxn += fmt.Sprintf("Server={%s}; ", c.Server)
 	if c.Trusted || (c.User == "" && c.Password == "") {
-		cxn += fmt.Sprintf("Trusted_Connection=yes")
+		cxn += fmt.Sprintf("Trusted_Connection=yes; ")
 	} else {
 		cxn += fmt.Sprintf("UID=%s; PWD=%s; ", c.User, c.Password)
 	}
