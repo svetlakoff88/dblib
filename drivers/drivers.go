@@ -18,9 +18,9 @@ const (
 )
 
 var orderedDrivers = []string{
+	SQLServer,
 	NativeClient11,
 	ODBC13,
-	SQLServer,
 }
 
 func getDrivers() ([]string, error) {
